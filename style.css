@@ -1,133 +1,18 @@
-.goals-card{
-
-    margin-top:40px;
-
-}
-
-.goal-wrapper{
-
-    position:relative;
-    margin-top:50px;
-
-}
-
-.progress-line{
-
-    position:absolute;
-    left:8%;
-    right:8%;
-    top:14px;
-
-    height:4px;
-
-    background:rgba(255,255,255,.15);
-
-    border-radius:10px;
-
-}
-
-.progress-fill{
-
-    width:0%;
-
-    height:100%;
-
-    background:linear-gradient(90deg,#c026d3,#ec4899);
-
-    border-radius:10px;
-
-    transition:1s;
-
-}
-
-.goals{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    position:relative;
-
-}
-
-.goal{
-
-    width:120px;
-
-    text-align:center;
-
-}
-
-.circle{
-
-    width:30px;
-
-    height:30px;
-
-    border-radius:50%;
-
-    margin:auto;
-
-    background:#2d2d36;
-
-    border:3px solid #57576a;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    color:transparent;
-
-    transition:.4s;
-
-}
-
-.goal.active .circle{
-
-    background:#d946ef;
-
-    border-color:#f472b6;
-
-    color:white;
-
-    box-shadow:0 0 25px #d946ef;
-
-}
-
-.goal h4{
-
-    margin-top:18px;
-
-    font-size:20px;
-
-}
-
-.goal p{
-
-    color:#aaa;
-
-    margin-top:5px;
-
-}
-
-@media(max-width:900px){
-
-.goals{
-
-overflow-x:auto;
-
-gap:40px;
-
-padding-bottom:15px;
-
-}
-
-.progress-line{
-
-display:none;
-
-}
-
-}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:Inter,sans-serif;background:#08080b;color:#fff}
+.bg{position:fixed;inset:0;background:url('malibu.jpg') center/cover no-repeat;filter:blur(3px) brightness(.35);transform:scale(1.05)}
+.overlay{position:fixed;inset:0;background:linear-gradient(rgba(10,10,20,.2),rgba(5,5,10,.75))}
+.container{position:relative;max-width:1100px;margin:auto;padding:60px 20px;text-align:center}
+.logo{font-size:60px;color:#f472b6}h1{font-size:54px}.sub{opacity:.8;margin:10px 0 25px}
+.badge{display:inline-block;padding:10px 20px;border-radius:999px;background:rgba(255,255,255,.08);backdrop-filter:blur(10px)}
+.glass{margin:30px 0;padding:30px;border-radius:24px;background:rgba(20,20,28,.45);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.08)}
+.glass h3{color:#d946ef;margin-bottom:20px}#counter{font-size:44px;font-weight:800}.quote{font-size:28px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:18px}
+.stat span{font-size:36px}.stat b{display:block;font-size:32px;margin:8px 0}
+.timeline{display:flex;align-items:flex-start;justify-content:center;flex-wrap:wrap}
+.goal{width:120px}.circle{width:24px;height:24px;border-radius:50%;margin:auto;background:#363646;border:3px solid #555;transition:.4s;position:relative}
+.goal.active .circle{background:#d946ef;border-color:#f472b6;box-shadow:0 0 20px #d946ef}
+.goal.active .circle:after{content:'✓';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:13px}
+.line{width:60px;height:3px;background:#4b4b5a;margin-top:12px}
+.goal.active + .line{background:#d946ef}
+.goal h4{margin-top:15px}.goal p{font-size:13px;color:#aaa}
+@media(max-width:700px){h1{font-size:36px}#counter{font-size:26px}.quote{font-size:20px}.line{display:none}}
