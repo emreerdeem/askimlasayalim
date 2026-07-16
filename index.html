@@ -9,33 +9,44 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="bg"></div>
-<div class="overlay"></div>
-
+<div class="bg"></div><div class="overlay"></div>
 <main class="container">
 <div class="logo">♡</div>
 <h1>Alkolsüz Bir Yaşam</h1>
-<p class="sub">Her geçen saniye, daha iyi bir sen.</p>
-
-<div class="badge">📅 16 Temmuz 2026'dan itibaren</div>
+<p class="sub">Her geçen saniye daha iyi bir sen.</p>
+<div class="badge">📅 Başlangıç: 16 Temmuz 2026</div>
 
 <section class="glass">
 <h3>ALKOLSÜZ GEÇEN SÜRE</h3>
-<div id="counter">00 Gün : 00 Saat : 00 Dakika : 00 Saniye</div>
+<div id="counter">0 Gün : 0 Saat : 0 Dakika : 0 Saniye</div>
 </section>
 
 <section class="glass">
-<p class="quote">“Bugün vazgeçtiğin bir şey, yarın kazandığın her şey olacak.”</p>
+<p class="quote">"Bugün vazgeçtiğin bir şey, yarın kazandığın her şey olacak."</p>
 </section>
 
 <div class="stats">
-<div class="glass stat"><span>❤️</span><b>0</b><small>İçki İçmedi</small></div>
+<div class="glass stat"><span>❤️</span><b>0</b><small>İçki</small></div>
 <div class="glass stat"><span>💰</span><b>₺0</b><small>Tasarruf</small></div>
-<div class="glass stat"><span>🌿</span><b>0</b><small>Sağlıklı Gün</small></div>
-<div class="glass stat"><span>⭐</span><b>0</b><small>Rozet</small></div>
+<div class="glass stat"><span>🌿</span><b id="daysLabel">0</b><small>Gün</small></div>
+<div class="glass stat"><span>⭐</span><b id="badgeCount">0</b><small>Rozet</small></div>
 </div>
-</main>
 
+<section class="glass goals-card">
+<h3>🎯 Hedefler</h3>
+<div class="timeline">
+<div class="goal" data-days="1"><div class="circle"></div><h4>24 Saat</h4><p>İlk Adım</p></div>
+<div class="line"></div>
+<div class="goal" data-days="7"><div class="circle"></div><h4>7 Gün</h4><p>Bir Hafta</p></div>
+<div class="line"></div>
+<div class="goal" data-days="30"><div class="circle"></div><h4>30 Gün</h4><p>Bir Ay</p></div>
+<div class="line"></div>
+<div class="goal" data-days="100"><div class="circle"></div><h4>100 Gün</h4><p>Efsane</p></div>
+<div class="line"></div>
+<div class="goal" data-days="365"><div class="circle"></div><h4>1 Yıl</h4><p>Yeni Hayat</p></div>
+</div>
+</section>
+</main>
 <script src="script.js"></script>
 </body>
 </html>
