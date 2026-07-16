@@ -1,9 +1,16 @@
 const start=new Date('2026-07-16T00:00:00');
-function t(){let d=new Date()-start;if(d<0)d=0;
-let days=Math.floor(d/86400000);d%=86400000;
-let h=Math.floor(d/3600000);d%=3600000;
-let m=Math.floor(d/60000);d%=60000;
-let s=Math.floor(d/1000);
-document.getElementById('counter').textContent=`${days} Gün : ${h} Saat : ${m} Dakika : ${s} Saniye`;
+function update(){
+let diff=new Date()-start;if(diff<0)diff=0;
+let days=Math.floor(diff/86400000);let r=diff%86400000;
+let h=Math.floor(r/3600000);r%=3600000;
+let m=Math.floor(r/60000);r%=60000;
+let s=Math.floor(r/1000);
+counter.textContent=`${days} Gün : ${h} Saat : ${m} Dakika : ${s} Saniye`;
+daysLabel.textContent=days;
+let badges=0;
+document.querySelectorAll('.goal').forEach(g=>{
+ if(days>=+g.dataset.days){g.classList.add('active');badges++;}
+});
+badgeCount.textContent=badges;
 }
-t();setInterval(t,1000);
+update();setInterval(update,1000);
